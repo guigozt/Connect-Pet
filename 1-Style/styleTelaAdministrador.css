@@ -1,0 +1,195 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #93b9ad;
+    color: #2f3e3b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px; /* 🔹 padding responsivo */
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+    animation: slideDown 0.8s ease-in-out;
+}
+
+/* ===== FORMULÁRIOS ===== */
+.formulario {
+    width: 100%;
+    max-width: 700px;
+    animation: popIn 0.7s ease-out forwards;
+}
+
+.buscarContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;           /* 🔹 evita quebra feia */
+    width: 100%;
+}
+
+.buscarContainer input[type="text"] {
+    flex: 1;
+}
+
+/* Input padrão */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #6a8c82;
+    box-shadow: 0 0 8px rgba(106,140,130,0.6);
+    transform: scale(1.03);
+}
+
+/* BOTÕES */
+button {
+    background-color: #6a8c82;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap; /* 🔹 evita quebra de texto no botão */
+}
+
+button:hover {
+    background-color: #4e6a62;
+    transform: scale(1.07);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Container dos botões abaixo do formulário */
+.subFormulario {
+    margin-top: 15px;
+    animation: fadeInUp 0.8s ease-in-out;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;       /* 🔹 impede que quebrem errado */
+    justify-content: center;
+}
+
+/* ===== TABELA ===== */
+#tabela {
+    margin-top: 50px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 700px;
+    animation: fadeInUp 1s ease forwards 0.5s;
+    overflow-x: auto; /* 🔹 permite scroll no mobile */
+}
+
+#tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 0.95rem;
+    border: 1px solid #e0e0e0;
+}
+
+#tabela th, #tabela td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+#tabela th {
+    background-color: #6a8c82;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#tabela tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#tabela tr:hover {
+    background-color: #d8ebe5;
+}
+
+#tabela td {
+    color: #2f3e3b;
+    border-bottom: 1px solid #ddd;
+}
+
+.logoutBtn {
+    background-color: #c94f4f;
+    padding: 10px 18px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 100px;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.logoutBtn:hover {
+    background-color: #a93c3c;
+    transform: scale(1.07);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.logoutBtn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    button {
+        width: 100%;         /* 🔹 botões ficam organizados e responsivos */
+        justify-content: center;
+    }
+
+    .buscarContainer {
+        flex-direction: column;  /* 🔹 melhor distribuição no mobile */
+        align-items: stretch;
+    }
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes popIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }

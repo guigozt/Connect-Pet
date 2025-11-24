@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Administrador - Connect Pet</title>
+    <link rel="stylesheet" href="/1-Style/styleTelaAdministrador.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <h1>Tela de Administrador - Connect Pet</h1>    
+
+    <div class="formulario">
+        <div class="buscarContainer">
+            <input type="text" placeholder="Pesquisar usuário" id="pesquisar" name="pesquisar">
+            <button onclick="buscar()"><i data-feather="search"></i> Buscar</button>
+        </div>
+
+        <div class="subFormulario">
+            <button onclick="cadastrar()"><i data-feather="user-plus"></i> Cadastrar</button>
+            <button onclick="atualizar()"><i data-feather="refresh-cw"></i> Atualizar</button>
+            <button onclick="apagar()"><i data-feather="trash-2"></i> Apagar</button>
+        </div>
+    </div>
+
+    <div id="tabela"></div>
+
+    <button class="logoutBtn" onclick="window.location.href='index.html'">
+        <i data-feather="log-out"></i> Deslogar
+    </button>
+
+    <script src="/2-Javascript/localStorage.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
